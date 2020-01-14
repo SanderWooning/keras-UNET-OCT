@@ -5,7 +5,19 @@ import matplotlib.pyplot as plt
 
 """
 Path_layers is the location where all the .mat files are stored
-Save_dir is the location where 2 directories need to be made called im/ and l1/, this is where the images and layers are stored
+
+
+Save_dir is the location where 2 directories need to be made called "/image" and "/label", this is where the images and layers are stored
+Directory Index save directory
+
+MainSaveDir
+⌞ image
+|    ⌞   convertedimage.tif
+|        convertedimage.tif
+⌞ label   
+    ⌞    convertedlabel.tif
+         convertedlabel.tif
+
 """
 path_layers = "DirectoryToMatFiles"
 save_dir = "SaveDirectory"
@@ -56,8 +68,8 @@ for dirName, subdirList, fileList in sorted(os.walk(path_layers)):
                     name = filename[:-4].split("_")[-1]
                     name = name[1:]
 
-                    name_curr_im = save_dir + "im/" + "1" + name + str(i) + ".tif"
-                    name_curr_l1 = save_dir + "l1/" + "1" + name + str(i) + ".tif"
+                    name_curr_im = save_dir + "image/" + "1" + name + str(i) + ".tif"
+                    name_curr_l1 = save_dir + "label/" + "1" + name + str(i) + ".tif"
 
                     # 2. Print each B-scan to file
                     fig = plt.figure(frameon=False)
