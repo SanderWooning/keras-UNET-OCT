@@ -1,3 +1,5 @@
 # RPE Drusen Complex Segmentation by UNET 
 
-This program has been written for the internship in Erasmus MC
+This repo is put together for automatically segmenting the RPE-complex with a convolutional neural network based on the Unet architecture. 
+
+
