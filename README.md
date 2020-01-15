@@ -1,3 +1,3 @@
-# Drusen Segmentation by a convolutional neural network
+# RPE Drusen Complex Segmentation by UNET 
 
 This program has been written for the internship in Erasmus MC
