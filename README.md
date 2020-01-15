@@ -1,4 +1,4 @@
-# RPE Drusen Complex Segmentation by UNET 
+# RPE Drusen Complex Segmentation by UNET network 
 
 ## Summary
 
@@ -22,10 +22,15 @@ For training the model, a partition of [the Duke University SD-OCT datatset](htt
 ### Data Augmentation & Normalization
 The Keras ImageDataGenerator has been used to generate batches of augemented images during training by using multi-processing. The geometric & intensity based augementations used are: 
 
-| Augmentation | Type |Value | 
-|---|---|
-| zoom_range | Geometric Aug | 0.9 , 1.2 |
-| width_shift_range <br/> height_shift_range | Geometric Aug| 0.95 , 1.05
+| Augmentation | Type | Value | 
+|---|---|---|
+| zoom_range | Geometric Augmentation | 0.9 , 1.2 |
+| width_shift_range <br/> height_shift_range | Geometric Augmentation| 0.95 , 1.05 | 
+| shear_range | Geometric Augmentation | 0.95 , 1.05 | 
+| horizontal_flip | Geometric Augmentation | True | 
+| brightness_range | Intensity Augmentation | 0.4, 1.2 | 
+| featurewise_center | Normalization Operation | True | 
+| featurewise_std_normalization | Normalization Operation | True | 
 
 
 ### Training & Model 
