@@ -1,7 +1,6 @@
 import keras
 import h5py
 import numpy as np
-import numpy as np
 from keras.layers import Input, BatchNormalization, Activation, Dense, Dropout
 from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 from keras.optimizers import Adam
