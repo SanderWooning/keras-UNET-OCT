@@ -35,4 +35,16 @@ The Keras ImageDataGenerator has been used to generate batches of augemented ima
 
 
 ### Training & Model 
-The U-NET model has been used for segmenting the three retinal layer. Training was done u
+The U-NET model has been used for segmenting the three retinal layer with an input resolution of 512 x 512 x 1. Training was done for 100 epochs on the above writen dataset with augmentations with the following parameters
+
+| Parameter | Value | 
+|---|---|
+| Batch size | 16 | 
+| Epochs | 100 | 
+| Loss function | Generalized Dice Loss | 
+| Metric | Dice Coef | 
+| Optimizer | Adam | 
+| Dropout | 0.25 | 
+| Filters | 16 | 
+| Learning rate | 1e-4, 1e-5, 1e-6 | 
+
