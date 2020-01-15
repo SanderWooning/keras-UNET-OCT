@@ -14,7 +14,7 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 from losses2 import *
 from skimage import measure
 from skimage.morphology import medial_axis, skeletonize
-from oct_mincostpath import *
+from predictlib import *
 from skimage.feature.texture import greycoprops, greycomatrix
 
 from scipy.signal import find_peaks
