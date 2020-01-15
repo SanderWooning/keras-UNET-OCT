@@ -25,7 +25,8 @@ The Keras ImageDataGenerator has been used to generate batches of augemented ima
 | Augmentation | Type | Value | 
 |---|---|---|
 | zoom_range | Geometric Augmentation | 0.9 , 1.2 |
-| width_shift_range <br/> height_shift_range | Geometric Augmentation| 0.95 , 1.05 | 
+| width_shift_range  | Geometric Augmentation| 0.95 , 1.05 | 
+| height_shift_range | Geometric Augmentation| 0.95 , 1.05 |
 | shear_range | Geometric Augmentation | 0.95 , 1.05 | 
 | horizontal_flip | Geometric Augmentation | True | 
 | brightness_range | Intensity Augmentation | 0.4, 1.2 | 
