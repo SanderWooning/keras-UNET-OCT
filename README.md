@@ -6,7 +6,7 @@ This repo is put together for automatically segmenting the RPE-complex with a co
 
 ![images/image3.png](images/image3.png)
 
-<sub>Figure 1. Original image with markings of the layers for information (A), The annotated ground thruth mask (B), Prediction of the model with a visualization gradient (C).</sub>
+<sub>Figure 1. Original image with markings of the layers for information (A), The annotated ground thruth mask (B), Prediction of the model with a visualization gradient (C). All from the Duke University Dataset</sub>
 
 ---
 ## Overview
@@ -16,7 +16,7 @@ A total of 15744 SD-OCT B-scans (Bioptigen SD-OCT, NC, USA) from 269 AMD patient
 
 For training the model, a partition of [the Duke University SD-OCT datatset](http://people.duke.edu/~sf59/RPEDC_Ophth_2013_dataset.htm) was used for training. These images were transfered from their .mat format to .tif images for better use in generators. Only slice 30 to 70 was used, they only had the fully annotated masks. Masks were made by convertining the pixel wide annotated mask to a 3 pixel wide annotated mask which can been seen i. All this preprocessing is done by the code imagemaskfrommat.py. 
 
-|![images/imageduke.png](images/imageduke.png) </br> <sub>Figure 2. Example of an converted OCT image by the .mat file </sub>  	| ![images/maskduke.png](images/maskduke.png) </br> <sub>Figure 3. Example of an 3 pixel wide converted ground thruth mask by the .mat annotation</sub> 	|
+|![images/imageduke.png](images/imageduke.png) </br> <sub>Figure 2. Example of an converted OCT image by the .mat file</sub>  	| ![images/maskduke.png](images/maskduke.png) </br> <sub>Figure 3. Example of an 3 pixel wide converted ground thruth mask by the .mat annotation</sub> 	|
 |---|---|
 
 ### Data Augmentation & Normalization
