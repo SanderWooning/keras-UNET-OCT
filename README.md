@@ -34,7 +34,7 @@ The Keras ImageDataGenerator has been used to generate batches of augemented ima
 | featurewise_std_normalization | Normalization Operation | True | 
 
 
-### Training & Model 
+### Model & Parameters 
 The U-NET model has been used for segmenting the three retinal layer with an input resolution of 512 x 512 x 1. Training was done for 100 epochs on the above writen dataset with augmentations with the following parameters
 
 | Parameter | Value | 
@@ -48,3 +48,11 @@ The U-NET model has been used for segmenting the three retinal layer with an inp
 | Filters | 16 | 
 | Learning rate | 1e-4, 1e-5, 1e-6 | 
 
+### Evaluation
+After this evaluating is done on the testing portion, a Dice-score of 0.979 was achieved.
+
+### Predicting
+After the model is done training, you can let it predict the retinal images from an OCT scan. Find one on Google and test it yourself! Firstly, a prediction is done which results in a imperfect binary mask. Second, all small connected components get removed. Third, a minimum cost path approach is applied to fill in gap in the lines. To visualize the area, we based it on the average between the lines. 
+
+### Feature Extracting
+Different features can be extracted from these images such as shape-based, intensity-based and texture-based features. 
