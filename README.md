@@ -2,7 +2,7 @@
 
 ## Summary
 
-This repo is put together for automatically segmenting the RPE-complex with a convolutional neural network based on the [Unet architecture](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/). Together with postprocessing-operations, giving the following results in different datasets as shown in the figure 1. A network was trained with Keras backend on [the Duke University SD-OCT datatset](http://people.duke.edu/~sf59/RPEDC_Ophth_2013_dataset.htm). 
+This repo is put together for automatically segmenting the RPE-complex with a convolutional neural network based on the [Unet architecture](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/). Together with postprocessing-operations, giving the following results in different datasets as shown in the figure 1. A network was trained with Keras backend on [the Duke University SD-OCT datatset](http://people.duke.edu/~sf59/RPEDC_Ophth_2013_dataset.htm).  Firstly the retinal layers get segmented (ILM, BM and RPE). After postprosessing, the difference between the BM and the RPE is a calculated. Resulting in a Dice-score of 0.979. 
 
 ![images/predictions.png](images/predictions.png)
 
@@ -19,7 +19,14 @@ For training the model, a partition of [the Duke University SD-OCT datatset](htt
 |![images/imageduke.png](images/imageduke.png) </br> <sub>Figure 2. Example of an converted OCT image by the .mat file </sub>  	| ![images/maskduke.png](images/maskduke.png) </br> <sub>Figure 3. Example of an 3 pixel wide converted ground thruth mask by the .mat annotation</sub> 	|
 |---|---|
 
+### Data Augmentation & Normalization
+The Keras ImageDataGenerator has been used to generate batches of augemented images during training by using multi-processing. The geometric & intensity based augementations used are: 
+
+| Augmentation | Type |Value | 
+|---|---|
+| zoom_range | Geometric Aug | 0.9 , 1.2 |
+| width_shift_range <br/> height_shift_range | Geometric Aug| 0.95 , 1.05
+
+
 ### Training & Model 
-Used in 
-
-
+The U-NET model has been used for segmenting the three retinal layer. Training was done u
