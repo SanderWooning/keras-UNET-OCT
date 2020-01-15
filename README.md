@@ -4,9 +4,9 @@
 
 This repo is put together for automatically segmenting the RPE-complex with a convolutional neural network based on the [Unet architecture](http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/). Together with postprocessing-operations, giving the following results in different datasets as shown in the figure 1. A network was trained with Keras backend on [the Duke University SD-OCT datatset](http://people.duke.edu/~sf59/RPEDC_Ophth_2013_dataset.htm).  Firstly the retinal layers get segmented (ILM, BM and RPE). After postprosessing, the difference between the BM and the RPE is a calculated. Resulting in a Dice-score of 0.979. 
 
-![images/predictions.png](images/predictions.png)
+![images/image3.png](images/image3.png)
 
-<sub>Figure 1. Image predictions of the model with postprocessing</sub>
+<sub>Figure 1. Original image with markings of the layers for information (A), The annotated ground thruth mask (B), Prediction of the model with a visualization gradient (C).</sub>
 
 ---
 ## Overview
