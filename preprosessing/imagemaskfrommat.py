@@ -81,6 +81,7 @@ for dirName, subdirList, fileList in sorted(os.walk(path_layers)):
                     fig.savefig(name_curr_im, dpi=my_dpi, pad_inches=0)
 
                     # 3. Print each associated layer to file (as white over black, creating a mask)
+                    # With linewidth of 0.25 to create 3 pixel wide lines for the mask
                     black = np.zeros([x, fin - ini], dtype=curr_im.dtype)
                     fig = plt.figure(frameon=False)
                     fig.set_size_inches(y / my_dpi, x / my_dpi)
